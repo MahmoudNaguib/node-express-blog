@@ -1,8 +1,6 @@
-const { Model } = require('objection');
-const knex = require('../Database/knex');
-Model.knex(knex)
+const BaseModel=require('./BaseModel');
 
-class UserModel extends Model {
+class UserModel extends BaseModel {
     static tableName = 'users';
 }
 module.exports =UserModel;

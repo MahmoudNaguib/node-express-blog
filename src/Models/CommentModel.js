@@ -1,8 +1,6 @@
-const { Model } = require('objection');
-const knex = require('../Database/knex');
-Model.knex(knex)
+const BaseModel=require('./BaseModel');
 
-class CommentModel extends Model {
+class CommentModel extends BaseModel {
     static tableName = 'comments';
     static relationMappings = {
         post: {

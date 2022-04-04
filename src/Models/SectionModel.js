@@ -1,8 +1,6 @@
-const { Model } = require('objection');
-const knex = require('../Database/knex');
-Model.knex(knex);
+const BaseModel=require('./BaseModel');
 
-class SectionModel extends Model {
+class SectionModel extends BaseModel {
     static tableName = 'sections';
     static get jsonSchema() {
         return {

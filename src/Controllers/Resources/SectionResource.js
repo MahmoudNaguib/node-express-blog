@@ -1,14 +1,8 @@
 const {getDate} = require('../../Helpers/Helpers');
+const BaseResource=require('./BaseResource');
 
-class SectionResource {
-    toArray(rows){
-        let output=[];
-        for(let i=0; i<rows.length; i++){
-            output.push(this.toRow(rows[i]));
-        }
-        return output;
-    }
-    toRow(row) {
+class SectionResource extends BaseResource{
+    toJson(row) {
         if(row){
             return {
                 type: 'sections',
