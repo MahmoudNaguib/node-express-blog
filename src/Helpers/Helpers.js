@@ -19,6 +19,15 @@ const helpers={
             result += characters.charAt(Math.floor(Math.random() * charactersLength));
         }
         return result;
+    },
+    transformValidationErrors:(errors)=>{
+        if(errors){
+            let errorsArr={};
+            Object.keys(errors).forEach(function(key){
+                errorsArr[key]=errors[key][0].message;
+            });
+            return errorsArr;
+        }
     }
 }
 module.exports=helpers;
