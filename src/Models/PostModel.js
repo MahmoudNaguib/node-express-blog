@@ -1,3 +1,4 @@
+const {Model} = require('objection');
 const BaseModel=require('./BaseModel');
 
 class PostModel extends BaseModel {
@@ -7,8 +8,8 @@ class PostModel extends BaseModel {
             relation: Model.BelongsToOneRelation,
             modelClass: require('./SectionModel'),
             join: {
-                from: 'posts.section',
-                to: 'posts.id'
+                from: 'posts.section_id',
+                to: 'sections.id'
             }
         },
         user: {

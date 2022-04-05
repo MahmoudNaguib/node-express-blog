@@ -1,3 +1,4 @@
+const {Model} = require('objection');
 const BaseModel=require('./BaseModel');
 
 class CommentModel extends BaseModel {
